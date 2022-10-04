@@ -12,30 +12,30 @@ import gr11review.part2.Utility;
 public class UtilityTest {
     // arrays that are used in testing are defined here
     
-    int[] withoutTenArray1In = {1, 10, 10, 2};
-    int[] withoutTenArray1Out = {1, 2, 0, 0};
-    int[] withoutTenArray2In = {10, 2, 10};
-    int[] withoutTenArray2Out = {2, 0, 0};
-    int[] withoutTenArray3In = {1, 99, 10};
-    int[] withoutTenArray3Out = {1, 99, 0};
-    int[] withoutTenArray4In = {1, 2, 10, 3, 10};
-    int[] withoutTenArray4Out = {1, 2, 3, 0, 0};
-    int[] withoutTenArray5In = {10};
-    int[] withoutTenArray5Out = {0};
-    int[] withoutTenArray6In = {};
-    int[] withoutTenArray6Out = {};
-    int[] seriesUpArray1 = {1};
-    int[] seriesUpArray2 = {1, 1, 2};
-    int[] seriesUpArray3 = {1, 1, 2, 1, 2, 3};
-    int[] seriesUpArray4 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4};
-    int[] seriesUpArray5 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5};
-    int[] seriesUpArray6 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6};
-    int[][] reverseArray1In = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-    int[][] reverseArray1Out = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
-    int[][] reverseArray2In = {{1, 4, 7}, {4, 5, 6}, {7, 4, 1}};
-    int[][] reverseArray2Out = {{1, 4, 7}, {6, 5, 4}, {7, 4, 1}};
-    int[][] reverseArray3In = {{2, 3}, {4, 5}, {1, 1}};
-    int[][] reverseArray3Out = {{1, 1}, {5, 4}, {3, 2}};
+    int[] ArrWithoutTenArray1In = {1, 10, 10, 2};
+    int[] ArrWithoutTenArray1Out = {1, 2, 0, 0};
+    int[] ArrWithoutTenArray2In = {10, 2, 10};
+    int[] ArrWithoutTenArray2Out = {2, 0, 0};
+    int[] ArrWithoutTenArray3In = {1, 99, 10};
+    int[] ArrWithoutTenArray3Out = {1, 99, 0};
+    int[] ArrWithoutTenArray4In = {1, 2, 10, 3, 10};
+    int[] ArrWithoutTenArray4Out = {1, 2, 3, 0, 0};
+    int[] ArrWithoutTenArray5In = {10};
+    int[] ArrWithoutTenArray5Out = {0};
+    int[] ArrWithoutTenArray6In = {};
+    int[] ArrWithoutTenArray6Out = {};
+    int[] ArrSeriesUpArray1 = {1};
+    int[] ArrSeriesUpArray2 = {1, 1, 2};
+    int[] ArrSeriesUpArray3 = {1, 1, 2, 1, 2, 3};
+    int[] ArrSeriesUpArray4 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4};
+    int[] ArrSeriesUpArray5 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5};
+    int[] ArrSeriesUpArray6 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6};
+    int[][] ArrReverseArray1In = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int[][] ArrReverseArray1Out = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+    int[][] ArrReverseArray2In = {{1, 4, 7}, {4, 5, 6}, {7, 4, 1}};
+    int[][] ArrReverseArray2Out = {{1, 4, 7}, {6, 5, 4}, {7, 4, 1}};
+    int[][] ArrReverseArray3In = {{2, 3}, {4, 5}, {1, 1}};
+    int[][] ArrReverseArray3Out = {{1, 1}, {5, 4}, {3, 2}};
 
 
     @Test
@@ -106,77 +106,77 @@ public class UtilityTest {
 
     @Test
     public void withoutTenTest1() {
-        assertArrayEquals (withoutTenArray1Out, Utility.withoutTen(withoutTenArray1In));
+        assertArrayEquals (ArrWithoutTenArray1Out, Utility.withoutTen(ArrWithoutTenArray1In));
     }
 
     @Test
     public void withoutTenTest2() {
-        assertArrayEquals (withoutTenArray2Out, Utility.withoutTen(withoutTenArray2In));
+        assertArrayEquals (ArrWithoutTenArray2Out, Utility.withoutTen(ArrWithoutTenArray2In));
     }
 
     @Test
     public void withoutTenTest3() {
-        assertArrayEquals (withoutTenArray3Out, Utility.withoutTen(withoutTenArray3In));
+        assertArrayEquals (ArrWithoutTenArray3Out, Utility.withoutTen(ArrWithoutTenArray3In));
     }
 
     @Test
     public void withoutTenTest4() {
-        assertArrayEquals (withoutTenArray4Out, Utility.withoutTen(withoutTenArray4In));
+        assertArrayEquals (ArrWithoutTenArray4Out, Utility.withoutTen(ArrWithoutTenArray4In));
     }
 
     @Test
     public void withoutTenTest5() {
-        assertArrayEquals (withoutTenArray5Out, Utility.withoutTen(withoutTenArray5In));
+        assertArrayEquals (ArrWithoutTenArray5Out, Utility.withoutTen(ArrWithoutTenArray5In));
     }
 
     @Test
     public void withoutTenTest6() {
-        assertArrayEquals (withoutTenArray6Out, Utility.withoutTen(withoutTenArray6In));
+        assertArrayEquals (ArrWithoutTenArray6Out, Utility.withoutTen(ArrWithoutTenArray6In));
     }
 
     @Test
     public void seriesUpTest1() {
-        assertArrayEquals (seriesUpArray1, Utility.seriesUp(1));
+        assertArrayEquals (ArrSeriesUpArray1, Utility.seriesUp(1));
     }
 
     @Test
     public void seriesUpTest2() {
-        assertArrayEquals (seriesUpArray2, Utility.seriesUp(2));
+        assertArrayEquals (ArrSeriesUpArray2, Utility.seriesUp(2));
     }
 
     @Test
     public void seriesUpTest3() {
-        assertArrayEquals (seriesUpArray3, Utility.seriesUp(3));
+        assertArrayEquals (ArrSeriesUpArray3, Utility.seriesUp(3));
     }
 
     @Test
     public void seriesUpTest4() {
-        assertArrayEquals (seriesUpArray4, Utility.seriesUp(4));
+        assertArrayEquals (ArrSeriesUpArray4, Utility.seriesUp(4));
     }
 
     @Test
     public void seriesUpTest5() {
-        assertArrayEquals (seriesUpArray5, Utility.seriesUp(5));
+        assertArrayEquals (ArrSeriesUpArray5, Utility.seriesUp(5));
     }
 
     @Test
     public void seriesUpTest6() {
-        assertArrayEquals (seriesUpArray6, Utility.seriesUp(6));
+        assertArrayEquals (ArrSeriesUpArray6, Utility.seriesUp(6));
     }
 
     @Test
     public void reverseTest1() {
-        assertArrayEquals (reverseArray1Out, Utility.reverse(reverseArray1In));
+        assertArrayEquals (ArrReverseArray1Out, Utility.reverse(ArrReverseArray1In));
     }
 
     @Test
     public void reverseTest2() {
-        assertArrayEquals (reverseArray2Out, Utility.reverse(reverseArray2In));
+        assertArrayEquals (ArrReverseArray2Out, Utility.reverse(ArrReverseArray2In));
     }
     
     @Test
     public void reverseTest3() {
-        assertArrayEquals (reverseArray3Out, Utility.reverse(reverseArray3In));
+        assertArrayEquals (ArrReverseArray3Out, Utility.reverse(ArrReverseArray3In));
     }
 
     
