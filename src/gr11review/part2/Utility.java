@@ -18,7 +18,7 @@ public class Utility {
         int intLastYAt = -1, intLastXAt = -1;
     
         int i = str.length() - 1;
-        while (boolYSeen == false) {
+        while (boolYSeen == false && i >= 0) {
             if (str.charAt(i) != 'y') {
                 i --;
             }
@@ -30,7 +30,7 @@ public class Utility {
         }
         
         i = str.length() - 1;
-        while (boolXSeen == false) {
+        while (boolXSeen == false && i >= 0) {
             if (str.charAt(i) != 'x') {
                 i --;
             }
