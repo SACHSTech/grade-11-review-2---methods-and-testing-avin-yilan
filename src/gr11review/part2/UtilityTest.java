@@ -1,6 +1,10 @@
 package gr11review.part2;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import java.io.IOException;
+
+
 import org.junit.jupiter.api.Test;
 import gr11review.part2.Utility;
 
@@ -51,4 +55,10 @@ public class UtilityTest {
     public void xyBalanceTest9() {
         assertEquals (false, Utility.xyBalance("yx"));
     }
+
+    @Test
+    public void longestWordTest1() throws IOException {
+        assertEquals ("gnjoeaiheof", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest1.txt"));
+    }
+    
 }

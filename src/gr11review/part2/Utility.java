@@ -73,16 +73,14 @@ public class Utility {
 		String strLongestStr = "";
 
 		String strCurrentLine = reader.readLine();
-		String strCurrentString = strCurrentLine.strip();
 
-		while (strCurrentString != null) {
-			if (strCurrentString.length() > intLongestWordCnt) {
-				intLongestWordCnt = strCurrentString.length();
-				strLongestStr = strCurrentString;
+		while (strCurrentLine != null) {
+			if (strCurrentLine.length() > intLongestWordCnt) {
+				intLongestWordCnt = strCurrentLine.length();
+				strLongestStr = strCurrentLine;
 			}
 
 			strCurrentLine = reader.readLine();
-			strCurrentString = strCurrentLine.strip();
 		}
 
 		reader.close();
