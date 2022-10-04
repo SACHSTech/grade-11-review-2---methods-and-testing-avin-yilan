@@ -14,9 +14,11 @@ public class Utility {
 	 */
 
 	public static boolean xyBalance(String str) {
+		// keeps track of whether each letter is present and where is the last index they appear in
         boolean boolYSeen = false, boolXSeen = false;
         int intLastYAt = -1, intLastXAt = -1;
     
+		// tracks for 'y'
         int i = str.length() - 1;
         while (boolYSeen == false && i >= 0) {
             if (str.charAt(i) != 'y') {
@@ -29,6 +31,8 @@ public class Utility {
             }
         }
         
+
+		// tracks for 'x'
         i = str.length() - 1;
         while (boolXSeen == false && i >= 0) {
             if (str.charAt(i) != 'x') {
@@ -41,7 +45,7 @@ public class Utility {
             }
         }
 
-
+		// final values returned based on whether x and y were present
         if (boolXSeen == true) {
             if (intLastXAt > intLastYAt) {
                 return false;
@@ -69,11 +73,15 @@ public class Utility {
 	public static String longestWord(String filenametxt) throws IOException {
 		BufferedReader reader = new BufferedReader(new FileReader (filenametxt));
 
+
+		// longest word set to empty string with the length of zero
 		int intLongestWordCnt = 0;
 		String strLongestStr = "";
 
+		// line one of the file read
 		String strCurrentLine = reader.readLine();
 
+		// while lines still have strings in them each is compared to the longest word in store
 		while (strCurrentLine != null) {
 			if (strCurrentLine.length() > intLongestWordCnt) {
 				intLongestWordCnt = strCurrentLine.length();
@@ -83,6 +91,7 @@ public class Utility {
 			strCurrentLine = reader.readLine();
 		}
 
+		// reader closes
 		reader.close();
 
         return strLongestStr;
@@ -102,9 +111,11 @@ public class Utility {
 
 	public static int[] withoutTen (int[] nums) {
 
+		// new array and its placeholder created
 		int[] newNums = new int[nums.length];
 		int intPlaceHolderInNew = 0;
 		
+		// for every element that is not ten, an element is filled in the new array and the placeholder is updated
 		for (int i = 0; i < nums.length; i ++) {
 			if (nums[i] != 10) {
 				newNums[intPlaceHolderInNew] = nums[i];
@@ -112,6 +123,7 @@ public class Utility {
 			}
 		}
 
+		// final zeros added in case there are other values in the new array
         while (intPlaceHolderInNew < nums.length) {
             newNums[intPlaceHolderInNew] = 0;
             intPlaceHolderInNew++;
@@ -132,6 +144,7 @@ public class Utility {
 	 */
 
 	public static int[] seriesUp (int n) {
+		// new array made
 		int[] myArray = new int[n * (n + 1) / 2];
 		int intPlaceHolder = 0;
 		
@@ -159,9 +172,10 @@ public class Utility {
 
 	public static int[][] reverse (int[][] arr) {
 
+		// new array made
 		int[][] reverseArray = new int[arr.length][arr[0].length];
 													
-		
+		// using subtraction, the index is found in every loop based on i and j
 		for (int i = 0; i < arr.length; i ++) {
 			for (int j = 0; j < arr[0].length; j ++) {
 				reverseArray[i][j] = arr[arr.length - 1 - i][arr[0].length - 1 - j];

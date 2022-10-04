@@ -10,7 +10,8 @@ import org.junit.jupiter.api.Test;
 import gr11review.part2.Utility;
 
 public class UtilityTest {
-
+    // arrays that are used in testing are defined here
+    
     int[] withoutTenArray1In = {1, 10, 10, 2};
     int[] withoutTenArray1Out = {1, 2, 0, 0};
     int[] withoutTenArray2In = {10, 2, 10};
