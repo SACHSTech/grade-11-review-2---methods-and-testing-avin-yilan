@@ -2,6 +2,7 @@ package gr11review.part2;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
 import java.io.IOException;
 
 
@@ -61,4 +62,14 @@ public class UtilityTest {
         assertEquals ("gnjoeaiheof", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest1.txt"));
     }
     
+    @Test
+    public void longestWordTest2() throws IOException {
+        assertEquals ("thislineistheanswerbababababababababababab", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest2.txt"));
+    }
+
+    @Test
+    public void longestWordTest3() throws IOException {
+        assertEquals ("", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest3.txt"));
+    }
+
 }
