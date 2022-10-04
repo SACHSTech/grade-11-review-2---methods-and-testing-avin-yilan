@@ -29,6 +29,13 @@ public class UtilityTest {
     int[] seriesUpArray4 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4};
     int[] seriesUpArray5 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5};
     int[] seriesUpArray6 = {1, 1, 2, 1, 2, 3, 1, 2, 3, 4, 1, 2, 3, 4, 5, 1, 2, 3, 4, 5, 6};
+    int[][] reverseArray1In = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
+    int[][] reverseArray1Out = {{9, 8, 7}, {6, 5, 4}, {3, 2, 1}};
+    int[][] reverseArray2In = {{1, 4, 7}, {4, 5, 6}, {7, 4, 1}};
+    int[][] reverseArray2Out = {{1, 4, 7}, {6, 5, 4}, {7, 4, 1}};
+    int[][] reverseArray3In = {{2, 3}, {4, 5}, {1, 1}};
+    int[][] reverseArray3Out = {{1, 1}, {5, 4}, {3, 2}};
+
 
     @Test
     public void xyBalanceTest1() {
@@ -156,7 +163,20 @@ public class UtilityTest {
         assertArrayEquals (seriesUpArray6, Utility.seriesUp(6));
     }
 
+    @Test
+    public void reverseTest1() {
+        assertArrayEquals (reverseArray1Out, Utility.reverse(reverseArray1In));
+    }
+
+    @Test
+    public void reverseTest2() {
+        assertArrayEquals (reverseArray2Out, Utility.reverse(reverseArray2In));
+    }
     
+    @Test
+    public void reverseTest3() {
+        assertArrayEquals (reverseArray3Out, Utility.reverse(reverseArray3In));
+    }
 
     
 }
