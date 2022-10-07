@@ -1,5 +1,9 @@
 package gr11review.part2;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 public class Utility {
 
     // Yilan's branch
@@ -18,7 +22,7 @@ public class Utility {
         int sum = 0;
         String number = "";
 
-        for(int i = 0; i < str.length(); i++) {
+        for (int i = 0; i < str.length(); i++) {
             char c = str.charAt(i);
 
             if (Character.isDigit(c)) {
@@ -29,7 +33,7 @@ public class Utility {
                 sum = sum + Integer.parseInt(number);
                 // Reset the number to blank
                 number = "";
-            } 
+            }
         }
 
         // To sum up the last number
@@ -41,9 +45,37 @@ public class Utility {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(sumNumbers("abc123xyz"));    
-        System.out.println(sumNumbers("aa11b33"));    
-        System.out.println(sumNumbers("7 11"));    
+    public static String alphaWord(String filenametxt) throws Exception {
+        BufferedReader br = new BufferedReader(new FileReader(filenametxt));
+        String line;
+        String alpha = "zzzzzzzz";
+        while ((line = br.readLine()) != null) {
+            // process the line.
+            if (alpha.compareTo(line) > 0) {
+                // New alpha!
+                alpha = line;
+            }
+            
+        }
+
+        br.close();
+
+        return alpha;
+    }
+
+    public static int[] notAlone(int[] nums, int value) {
+        if (nums.length < 3)
+            return nums;
+        
+        
+        return nums;
+    }
+
+    public static void main(String[] args) throws Exception {
+        System.out.println(sumNumbers("abc123xyz"));
+        System.out.println(sumNumbers("aa11b33"));
+        System.out.println(sumNumbers("7 11"));
+
+        System.out.println(alphaWord("src/gr11review/test2/Review2_3Test_1.txt"));
     }
 }
