@@ -3,6 +3,7 @@ package gr11review.part2;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.util.Arrays;
 
 public class Utility {
 
@@ -67,7 +68,22 @@ public class Utility {
         if (nums.length < 3)
             return nums;
         
-        
+        for (int i = 1; i < nums.length - 1; i++) {
+            int num = nums[i];
+            if (num == value) {
+                int before = nums[i - 1];
+                int after = nums[i + 1];
+                
+                if (before != num && after != num) {
+                    // Found an alone element, replace it with the larger number
+                    if (before > after)
+                        nums[i] = before;
+                    else
+                        nums[i] = after;
+                }
+            }
+        }
+
         return nums;
     }
 
@@ -77,5 +93,17 @@ public class Utility {
         System.out.println(sumNumbers("7 11"));
 
         System.out.println(alphaWord("src/gr11review/test2/Review2_3Test_1.txt"));
+
+        int nums[] = {1, 2, 3};
+        nums = notAlone(nums, 2);
+        System.out.println(Arrays.toString(nums));
+
+        int nums2[] = {1, 2, 3, 2, 5, 2};
+        nums2 = notAlone(nums2, 2);
+        System.out.println(Arrays.toString(nums2));
+
+        int nums3[] = {3, 4};
+        nums3 = notAlone(nums3, 3);
+        System.out.println(Arrays.toString(nums3));        
     }
 }
