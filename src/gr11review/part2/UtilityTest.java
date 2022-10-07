@@ -91,22 +91,22 @@ public class UtilityTest {
 
     @Test
     public void longestWordTest1() throws IOException {
-        assertEquals ("gnjoeaiheof", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest1.txt"));
+        assertEquals ("gnjoeaiheof", Utility.longestWord("bin\\gr11review\\part2\\FileIOTest1.txt"));
     }
     
     @Test
     public void longestWordTest2() throws IOException {
-        assertEquals ("thislineistheanswerbababababababababababab", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest2.txt"));
+        assertEquals ("thislineistheanswerbababababababababababab", Utility.longestWord("bin\\gr11review\\part2\\FileIOTest2.txt"));
     }
 
     @Test
     public void longestWordTest3() throws IOException {
-        assertEquals ("", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest3.txt"));
+        assertEquals ("", Utility.longestWord("bin\\gr11review\\part2\\FileIOTest3.txt"));
     }
 
     @Test
     public void longestWordTest4() throws IOException {
-        assertEquals ("consectetur", Utility.longestWord("C:\\Users\\ASUS\\github-classroom\\SACHSTech\\grade-11-review-2---methods-and-testing-avin-yilan\\src\\gr11review\\part2\\FileIOTest4.txt"));
+        assertEquals ("consectetur", Utility.longestWord("bin\\gr11review\\part2\\FileIOTest4.txt"));
     }
 
     @Test
