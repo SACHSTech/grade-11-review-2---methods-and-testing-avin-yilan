@@ -20,10 +20,12 @@ public class Utility {
      * @return
      */
     public static int sumNumbers(String str) {
+        // The sum to be returned at the end
         int sum = 0;
+        // A string to store the number 
         String number = "";
 
-        // Iterate through the string
+        // Iterate through the input string
         for (int i = 0; i < str.length(); i++) {
             // Get the character at index i
             char c = str.charAt(i);
@@ -33,14 +35,14 @@ public class Utility {
                 // Append the digit to the number
                 number = number + c;
             } else if (number.length() > 0) {
-                // Sum the number if it's no longer a digit
+                // Sum the number when the next char is no longer a digit
                 sum = sum + Integer.parseInt(number);
                 // Reset the number to blank
                 number = "";
             }
         }
 
-        // To sum up the last number
+        // To sum up the last number if there is any
         if (number.length() > 0) {
             sum = sum + Integer.parseInt(number);
         }
@@ -61,13 +63,14 @@ public class Utility {
     public static String alphaWord(String filenametxt) throws Exception {
         // Create a reader to read the file
         BufferedReader br = new BufferedReader(new FileReader(filenametxt));
+        // Variable to store each word
         String line;
         // Initialize alpha with a blank string
         String alpha = "";
 
         // Read each line, till the end of the file
         while ((line = br.readLine()) != null) {
-            // If alpha is alphabetically behind
+            // If alpha is blank or is alphabetically behind the new word
             if (alpha.length() == 0 || alpha.compareTo(line) > 0) {
                 // New alpha!
                 alpha = line;
@@ -103,6 +106,7 @@ public class Utility {
             int num = nums[i];
             // If the element matches the specified value
             if (num == value) {
+                // Get before and after values
                 int before = nums[i - 1];
                 int after = nums[i + 1];
 
